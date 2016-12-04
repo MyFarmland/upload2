@@ -1,0 +1,320 @@
+﻿/*按钮样式*/
+.pure-button-success, .pure-button-error, .pure-button-warning, .pure-button-secondary {
+color: white;
+border-radius: 4px;
+}
+
+.pure-button-success {
+background-color: #1CB841;
+}
+
+.pure-button-error {
+background-color: #CA3C3C;
+}
+
+.pure-button-warning {
+background-color: #DF7514;
+}
+
+.pure-button-secondary {
+background-color: #42B8DD;
+}
+
+/*分页*/
+.pure-paginator {
+letter-spacing: -0.31em;
+/* Webkit: collapse white-space between units; */
+text-rendering: optimizespeed;
+/* Webkit: fixes text-rendering: optimizeLegibility; */
+list-style: none;
+margin: 0;
+padding: 0;
+padding-top: 3px;
+padding-bottom: 3px;
+/*display: inline-block;*/
+width: inherit;
+}
+
+.pure-paginator li {
+display: inline-block;
+zoom: 1;
+letter-spacing: normal;
+word-spacing: normal;
+vertical-align: top;
+text-rendering: auto;
+margin-right: 1px;
+margin-left: 1px;
+}
+
+.pure-paginator li span {
+font-family: inherit;
+font-size: 100%;
+padding: .3em .5em;
+box-sizing: border-box;
+display: inline-block;
+zoom: 1;
+line-height: normal;
+white-space: nowrap;
+vertical-align: middle;
+text-align: center;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+}
+
+.pure-paginator li .pure-button {
+padding: 0.3em .8em;
+}
+
+.pure-paginator li .pure-button.prev {
+margin-right: 5px;
+}
+
+.pure-paginator li .pure-button.next {
+margin-left: 5px;
+}
+
+.pure-paginator li .pure-button:hover {
+background-color: #0078E7;
+color: #FFF;
+}
+/*输入框扩展*/
+/*金钱输入框*/
+.pure-form .pure-input-group {
+margin-bottom: 0;
+vertical-align: middle;
+position: relative;
+border-collapse: separate;
+vertical-align: middle;
+box-sizing: border-box;
+display: table;
+}
+
+.pure-input-group-addon {
+padding: 6px 12px;
+font-size: 14px;
+font-weight: 400;
+line-height: 1;
+color: #555;
+text-align: center;
+background-color: #E6E6E6;
+border: 1px solid #ccc;
+border-radius: 4px;
+white-space: nowrap;
+vertical-align: middle;
+}
+
+.pure-input-group-addon:first-child {
+border-right: 0;
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+width: auto;
+display: table-cell;
+}
+
+.pure-input-group-addon:last-child {
+border-left: 0;
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+width: auto;
+display: table-cell;
+}
+
+.pure-input-group input:not(:first-child):not(:last-child) {
+border-radius: 0;
+}
+
+.pure-input-group input:not(:first-child) {
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+}
+
+.pure-input-group input:not(:last-child) {
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+}
+/*参考bootstrap的箭头*/
+/*pure自带的箭头在字体变化的时候有问题*/
+.pure-caret {
+display: inline-block;
+width: 0;
+height: 0;
+margin-left: 2px;
+vertical-align: middle;
+border-top: 4px dashed;
+border-right: 4px solid transparent;
+border-left: 4px solid transparent;
+}
+/*tab*/
+.pure-tab {
+letter-spacing: -0.31em;
+/* Webkit: collapse white-space between units; */
+text-rendering: optimizespeed;
+/* Webkit: fixes text-rendering: optimizeLegibility; */
+list-style: none;
+margin: 0;
+padding: 0;
+border-bottom: 1px #e6e6e6 solid;
+}
+
+.pure-tab li {
+display: inline-block;
+zoom: 1;
+letter-spacing: normal;
+word-spacing: normal;
+vertical-align: top;
+text-rendering: auto;
+margin-bottom: -1px;
+}
+
+.pure-tab li .pure-button {
+background-color: #FFF;
+}
+
+.pure-tab-active {
+background-color: #E6E6E6;
+color: #666666;
+border: 1px #e6e6e6 solid;
+border-bottom: 0px;
+}
+
+.pure-tab li .pure-button:active, .pure-tab li .pure-button:link, .pure-tab li .pure-button:visited {
+box-shadow: none;
+background: none;
+background-color: #FFF;
+}
+
+.pure-tab li .pure-button:hover {
+background-color: #e6e6e6;
+}
+/*t弹框样式*/
+.pure-dialog {
+z-index: 999;
+position: absolute;
+width:auto;
+height: auto;
+border: 1px solid #AAA;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+border-radius: 5px;
+background-color: #EAEAEA;
+overflow-x: hidden;
+overflow-y: hidden;
+display: none;
+}
+.pure-dialog .pure-dialog-head {
+background-color: #EAEAEA;
+padding: 5px 15px;
+font-weight: bold;
+border-radius: 5px 5px 0px 0px;
+border-bottom: 1px solid #CCC;
+}
+.pure-dialog .pure-dialog-title {
+font-weight: bold;
+float: left;
+font-size: 16px;
+}
+.pure-dialog .pure-dialog-hint {
+background-color: #fff;
+padding: 23px 50px 30px 37px;
+text-align: left;
+}
+.pure-dialog .pure-dialog-command {
+background-color: #EAEAEA;
+padding: 6px 12px;
+text-align: right;
+line-height: 25px;
+border-top: 1px solid #CCC;
+}
+.pure-dialog .pure-dialog-close {
+background: transparent url("pure-extend/close_16px.png") no-repeat scroll;
+width: 16px;
+height: 16px;
+border-radius: 2px;
+float: right;
+}
+.pure-dialog .pure-dialog-close:hover {
+background-color: rgb(204,204,204);
+}
+
+.pure-mask {
+position: absolute;
+top: 0px;
+left: 0px;
+z-index: 9999;
+background: #DDD none repeat scroll 0% 0%;
+opacity: 0.5;
+display:none;
+width:100%;
+height:100%;
+}
+/*表单扩展*/
+ .pure-u-auto {
+display: inline-block;
+zoom: 1;
+word-spacing: normal;
+vertical-align: top;
+text-rendering: auto;
+width:inherit;
+min-width:90px;
+}
+.pure-lable {
+margin:0;
+cursor: default;
+vertical-align:middle;
+padding:0;
+}
+/*验证错误*/
+.pure-error {
+margin:0;
+cursor: default;
+vertical-align:middle;
+padding:0;
+color:red;
+text-align: right;
+display: inline-block;
+}
+.pure-c-success {
+color: rgb(28, 184, 65); /* this is a green */
+}
+.pure-c-error {
+color: rgb(202, 60, 60); /* this is a maroon */
+}
+.pure-c-warning {
+color: rgb(223, 117, 20); /* this is an orange */
+}
+.pure-c-secondary {
+color: rgb(66, 184, 221); /* this is a light blue */
+}
+.pure-verify {
+/*验证的特殊标记*/
+}
+/*字体*/
+.pure-font-12 {
+font-size: 12px;
+}
+.pure-font-14 {
+font-size: 14px;
+}
+.pure-font-18 {
+font-size: 18px;
+}
+.pure-font-24 {
+font-size: 24px;
+}
+.pure-font-30 {
+font-size: 30px;
+}
+.pure-font-36 {
+font-size: 36px;
+}
+/*英文小写*/
+.pure-text-lowercase {
+    text-transform: lowercase;
+}
+/*英文大写*/
+.pure-text-uppercase {
+    text-transform: uppercase;
+}
+/*英文首字母大写*/
+.pure-text-capitalize {
+    text-transform: capitalize;
+}

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>test页面</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script src="jquery.upload2.js"></script>
+<link href="Pure0.6.0/pure-min.css" rel="stylesheet" />
+<style type="text/css">
+        .button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+
+        .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+
+</style>
+<script type="text/javascript">
+    function look() {
+        //alert($("form input[type=file]").val())
+        alert($("input[name=test]").upload("getFileVal"))
+    }
+    function clean() {
+        $("input[name=test]").upload("clean")
+    }
+    function ajaxSubmit() {
+        $("input[name=test]").upload({
+            url: 'upload2.aspx',
+            // 其他表单数据
+            params: { name: 'pxblog' },
+            // 上传完成后, 返回json, text
+            dataType: 'json',
+            onSend: function (obj, str) {  return true; },
+            // 上传之后回调
+            onComplate: function (data) {
+                alert(data.file);
+            },
+            onProgress: function (evt) {
+                var percentComplete = Math.round(evt.loaded * 100 / evt.total);
+                $('#con01').html(percentComplete + "%");
+            }
+        });
+        $("input[name=test]").upload("ajaxSubmit")
+    }
+    function look1() {
+        //alert($("form input[type=file]").val())
+        alert($("input[name=test1]").upload("getFileVal"))
+    }
+    function clean1() {
+        $("input[name=test1]").upload("clean")
+    }
+    function ajaxSubmit1() {
+        $("input[name=test1]").upload({
+            url: 'upload2.aspx',
+            // 其他表单数据
+            params: { name: 'pxblog' },
+            // 上传完成后, 返回json, text
+            dataType: 'json',
+            onSend: function (obj, str) { return true; },
+            // 上传之后回调
+            onComplate: function (data) {
+                alert(data.file);
+            },
+            onProgress: function (evt) {
+                var percentComplete = Math.round(evt.loaded * 100 / evt.total);
+                $('#con01').append(percentComplete + "%");
+            }
+        });
+        $("input[name=test1]").upload("ajaxSubmit")
+    }
+</script>
+</head>
+
+<body>
+    <p>
+<input type="button" value="查看" onclick="look()" class="button-success pure-button"/>
+<input type="button" value="清空" onclick="clean()" class="button-success pure-button"/>
+<input type="button" value="提交" onclick="ajaxSubmit()" class="button-success pure-button"/>
+<input type="file" name="test" />
+    </p>
+    <div id="con01"></div>
+    <p>
+<input type="button" value="查看" onclick="look1()" class="button-success pure-button"/>
+<input type="button" value="清空" onclick="clean1()" class="button-success pure-button"/>
+<input type="button" value="提交" onclick="ajaxSubmit1()" class="button-success pure-button"/>
+<input type="file" name="test1" />
+    </p>
+    <div id="con02"></div>
+</body>
+</html>
+
