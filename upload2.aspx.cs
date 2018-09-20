@@ -16,22 +16,20 @@ namespace WebAppTest
             HttpFileCollection file = Request.Files;
             if (file.Count != 0)
             {
-                var avatarFile = Request.Files[0];
-                var avatarExt = Path.GetExtension(avatarFile.FileName);
-                avatarFile.SaveAs(Server.MapPath("/upload") + "/" + DateTime.Now.ToString("yyyyMMddHHmmss") + avatarExt);
-                Response.Write("{\"file\":\"lww\"}");//{"firstName":"Brett"}
+                
+                for (var i=0; i<Request.Files.Count;i++) {
+                    var avatarFile = Request.Files[i];
+                    var name = Request.Form["name"];
+                    var avatarExt = Path.GetExtension(avatarFile.FileName);
+                    var filename = DateTime.Now.ToString("yyyyMMddHHmmss")+"_"+i + avatarExt;
+                    avatarFile.SaveAs(Path.Combine(Server.MapPath("/upload"), filename));
+                }
+                
+                Response.Write("{\"file\":\"ok\"}");//返回信息
             }
             else {
                 Response.Write("Error");
             }
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            //BLL.UserBLL u=new BLL.UserBLL();
-            //Button1.Text = u.GetUser().Name;
-        }
-
-        
     }
 }
