@@ -1,8 +1,8 @@
-﻿/*******************************************************************************
+/*******************************************************************************
 * 异步上传文件,兼容IE8，火狐和谷歌可用,如果支持h5则使用h5
 * 实现单个多次上传不刷新
 * @author 技术交流群 <qq群:110826636>
-* @version 1.7.1 (2018-09-20) 修整代码
+* @version 1.7 (2018-09-20) 修整代码
 *******************************************************************************/
 (function ($) {
     var log=function(str){
@@ -40,7 +40,7 @@
         }
 
         for (var i = 0; i < target.length; i++){
-            for (var j = 0; target[i].files.length ;j++){
+            for (var j = 0; j<target[i].files.length ;j++){
                 var fileObj = target[i].files[j];
                 var fileName = target[i].name;
                 if (fileName == '' || fileName == undefined) {
